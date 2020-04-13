@@ -33,17 +33,18 @@ def cls():
 def write(word):
     for i in range(len(word)):
         print(word[i], sep='', end='', flush=True)
-        sleep(0.05)
+        sleep(0.04)
     sleep(0.09)
+
 
 def writeC(word, color):
     if color == 'green':
         for i in range(len(word)):
-            print(f'{bcolors.OK}{word[i]}{bcolors.END}', sep='', end='', flush=True)
+            print(f'{bcolors.PASS}{word[i]}{bcolors.END}', sep='', end='', flush=True)
             sleep(0.05)
     elif color == 'red':
         for i in range(len(word)):
-            print(f'{bcolors.WARNING}{word[i]}{bcolors.END}', sep='', end='', flush=True)
+            print(f'{bcolors.FAIL}{word[i]}{bcolors.END}', sep='', end='', flush=True)
             sleep(0.05)
     elif color == 'blue':
         for i in range(len(word)):
@@ -65,9 +66,23 @@ def initSystem():
     writeC("OK", "green")
     write("Creating helper Threads...")
     writeC("OK", "green")
+    write("Activating all Modules...")
+    writeC("OK", "green")
+    write("DONE")
+    print()
+
+
+def shutdownSys():
+    write("Deactivating Modules...")
+    writeC("Done", "red")
+    write("Shuting down System...")
+    writeC("Done", "red")
+    cls()
+    showLogo()
 
 cls()
 showLogo()
 
 initSystem()
-
+usrInput = input("Awaiting input...")
+shutdownSys()
