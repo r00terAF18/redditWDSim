@@ -1,7 +1,9 @@
 import bcolors
 import os
 from time import sleep
-from termcolor import colored
+if os.name == 'nt':
+    from colorama import init
+    init()
 
 def showLogo():
     logo = '''                                                                
@@ -31,7 +33,6 @@ def write(word, message, color='green'):
         sleep(0.05)
     
     if color == 'green':
-        print(colored(message, color))
         print(f'{bcolors.OK}{message}{bcolors.END}', end='')
     elif color == 'warning':
         print(f'{bcolors.WARNING}{message}{bcolors.END}', end='')
