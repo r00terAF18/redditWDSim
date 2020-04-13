@@ -80,9 +80,20 @@ def shutdownSys():
     cls()
     showLogo()
 
+
+def showMenu():
+    items = ['Scan', 'Hack Traffic Lights', 'Hack Car', 'Hack ATM', 'Hack Phone']
+    i = 0
+    for item in items:
+        write(str(i) + "-" + item)
+        i += 1
+        print()
+
 cls()
 showLogo()
 
-initSystem()
-usrInput = input("Awaiting input...")
-shutdownSys()
+# initSystem()
+# usrInput = input("Awaiting input...")
+# cls()
+
+showMenu()
