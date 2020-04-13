@@ -51,10 +51,19 @@ def writeC(word, color):
             sleep(0.05)
     else:
         write(message)
+    print()
 
 
 def initSystem():
     write("Booting System...")
+    writeC("OK", "green")
+    write("Loading Modules...")
+    writeC("OK", "green")
+    write("Reading changes...")
+    writeC("OK", "green")
+    write("Applying updates...")
+    writeC("OK", "green")
+    write("Creating helper Threads...")
     writeC("OK", "green")
 
 cls()
