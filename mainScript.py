@@ -41,15 +41,19 @@ def writeC(word, color):
     if color == 'green':
         for i in range(len(word)):
             print(f'{bcolors.PASS}{word[i]}{bcolors.END}', sep='', end='', flush=True)
-            sleep(0.05)
+            sleep(0.04)
     elif color == 'red':
         for i in range(len(word)):
             print(f'{bcolors.FAIL}{word[i]}{bcolors.END}', sep='', end='', flush=True)
-            sleep(0.05)
+            sleep(0.04)
     elif color == 'blue':
         for i in range(len(word)):
             print(f'{bcolors.BLUE}{word[i]}{bcolors.END}', sep='', end='', flush=True)
-            sleep(0.05)
+            sleep(0.04)
+    elif color == 'yellow':
+        for i in range(len(word)):
+            print(f'{bcolors.WARN}{word[i]}{bcolors.END}', sep='', end='', flush=True)
+            sleep(0.04)
     else:
         write(message)
     print()
@@ -85,7 +89,9 @@ def showMenu():
     items = ['Scan', 'Hack Traffic Lights', 'Hack Car', 'Hack ATM', 'Hack Phone']
     i = 0
     for item in items:
-        write(str(i) + "-" + item)
+        msg = bcolors.WARN + '[' + str(i) + ']' + bcolors.END
+        print(msg, sep='', end='')
+        write("-" + item)
         i += 1
         print()
 
