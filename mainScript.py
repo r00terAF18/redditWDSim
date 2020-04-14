@@ -131,7 +131,21 @@ def hackATM():
     write("[*] Sending packet...", TIME)
     write("[*] Running exploit....", TIME)
     write("[*] Running Crash0ut_Scr1pt...", TIME)
-    write("[*] Preparing for $$$$$$$$$$$$$$$$$$$$", TIME)
+    writeC("[*] Preparing for $$$$$$$$$$$$$$$$$$$$", "green", TIME)
+    writeC("[*] DONE", "green", TIME)
+    print()
+    input("Awaiting input...")
+    print()
+
+def hackPhone():
+    writeC("[*] L00king for Phones...", "green", 0.02)
+    write("[*] D-Authing ALL...", TIME)
+    write("[*] Sending Handshakes...", TIME)
+    write("[*] Aquiring response...", TIME)
+    write("[*] Preparing exploit...", TIME)
+    write("[*] Running exploit....", TIME)
+    write("[*] Running pa55_crack....", TIME)
+    write("[*] Indexing information...", TIME)
     writeC("[*] DONE", "green", TIME)
     print()
     input("Awaiting input...")
@@ -161,6 +175,9 @@ while INAPP:
     elif usrInput == "3":
         cls()
         hackATM()
+    elif usrInput == "4":
+        cls()
+        hackPhone()
     elif usrInput == "5":
         cls()
         INAPP = False
