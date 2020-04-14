@@ -5,6 +5,7 @@ if os.name == 'nt':
     from colorama import init
     init()
 
+TIME = 0.04
 
 def showLogo():
     logo = '''                                                                
@@ -30,57 +31,57 @@ def cls():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
-def write(word):
+def write(word, time):
     for i in range(len(word)):
         print(word[i], sep='', end='', flush=True)
-        sleep(0.04)
-    sleep(0.09)
+        sleep(time)
+    sleep(time + 0.02)
 
 
-def writeC(word, color):
+def writeC(word, color, time):
     if color == 'green':
         for i in range(len(word)):
             print(f'{bcolors.PASS}{word[i]}{bcolors.END}', sep='', end='', flush=True)
-            sleep(0.04)
+            sleep(time)
     elif color == 'red':
         for i in range(len(word)):
             print(f'{bcolors.FAIL}{word[i]}{bcolors.END}', sep='', end='', flush=True)
-            sleep(0.04)
+            sleep(time)
     elif color == 'blue':
         for i in range(len(word)):
             print(f'{bcolors.BLUE}{word[i]}{bcolors.END}', sep='', end='', flush=True)
-            sleep(0.04)
+            sleep(time)
     elif color == 'yellow':
         for i in range(len(word)):
             print(f'{bcolors.WARN}{word[i]}{bcolors.END}', sep='', end='', flush=True)
-            sleep(0.04)
+            sleep(time)
     else:
         write(message)
     print()
 
 
 def initSystem():
-    write("Booting System...")
-    writeC("OK", "green")
-    write("Loading Modules...")
-    writeC("OK", "green")
-    write("Reading changes...")
-    writeC("OK", "green")
-    write("Applying updates...")
-    writeC("OK", "green")
-    write("Creating helper Threads...")
-    writeC("OK", "green")
-    write("Activating all Modules...")
-    writeC("OK", "green")
-    write("DONE")
+    write("Booting System...", TIME)
+    writeC("OK", "green", TIME)
+    write("Loading Modules...", TIME)
+    writeC("OK", "green", TIME)
+    write("Reading changes...", TIME)
+    writeC("OK", "green", TIME)
+    write("Applying updates...", TIME)
+    writeC("OK", "green", TIME)
+    write("Creating helper Threads...", TIME)
+    writeC("OK", "green", TIME)
+    write("Activating all Modules...", TIME)
+    writeC("OK", "green", TIME)
+    write("DONE", TIME)
     print()
 
 
 def shutdownSys():
-    write("Deactivating Modules...")
-    writeC("Done", "red")
-    write("Shuting down System...")
-    writeC("Done", "red")
+    write("Deactivating Modules...", TIME)
+    writeC("Done", "red", TIME)
+    write("Shuting down System...", TIME)
+    writeC("Done", "red", TIME)
     cls()
     showLogo()
 
@@ -91,15 +92,21 @@ def showMenu():
     for item in items:
         msg = bcolors.WARN + '[' + str(i) + ']' + bcolors.END
         print(msg, sep='', end='')
-        write("-" + item)
+        write("-" + item, TIME)
         i += 1
         print()
+
+def scanArea():
+    pass
 
 cls()
 showLogo()
 
 # initSystem()
-# usrInput = input("Awaiting input...")
+# input("Awaiting input...")
 # cls()
 
 showMenu()
+
+usrInput = input("Select Hack >>> ")
+
