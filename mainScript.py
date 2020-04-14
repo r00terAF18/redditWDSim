@@ -84,8 +84,7 @@ def shutdownSys():
     writeC("Done", "red", TIME)
     write("Shuting down System...", TIME)
     writeC("Done", "red", TIME)
-    cls()
-    showLogo()
+    
 
 
 def showMenu():
@@ -96,18 +95,24 @@ def showMenu():
         print(msg, sep='', end='')
         write("-" + item, TIME)
         i += 1
-        print()
 
 def scanArea():
     writeC("[*] Starting Scan...", "green", TIME)
     write("####################################################################################################", TIME)
     writeC("DONE", "green", 0)
+    print()
+    input("Awaiting input...")
+    print()
 
 def hackTL():
     writeC("[*] Looking for nearest Traffic Light...", "green", 0.02)
     write("[*] Aquiring data...", TIME)
     write("[*] Infultraiting security...", TIME)
     write("[*] Running exploit....", TIME)
+    writeC("[*] DONE", "green", TIME)
+    print()
+    input("Awaiting input...")
+    print()
 
 
 # initSystem()
@@ -128,3 +133,11 @@ while INAPP:
         cls()
         hackTL()
     
+    elif usrInput == "5":
+        cls()
+        INAPP = False
+
+
+shutdownSys()
+input("Press any key to exit...")
+cls()
