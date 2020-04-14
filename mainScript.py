@@ -160,8 +160,8 @@ def hackTrain():
 def blowSteam():
     pass
 
-# initSystem()
-# input("Awaiting input...")
+initSystem()
+input("Awaiting input...")
 cls()
 
 
