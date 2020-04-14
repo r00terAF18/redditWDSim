@@ -5,7 +5,7 @@ if os.name == 'nt':
     from colorama import init
     init()
 
-TIME = 0.04
+TIME = 0.035
 INAPP = True
 
 def showLogo():
@@ -98,7 +98,7 @@ def showMenu():
 
 def scanArea():
     writeC("[*] Starting Scan...", "green", TIME)
-    write("####################################################################################################", TIME)
+    write("####################################################################################################", 0.03)
     writeC("DONE", "green", 0)
     print()
     input("Awaiting input...")
