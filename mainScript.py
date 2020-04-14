@@ -88,7 +88,7 @@ def shutdownSys():
 
 
 def showMenu():
-    items = ['Scan', 'Hack Traffic Lights', 'Hack Car', 'Hack ATM', 'Hack Phone', "Exit"]
+    items = ['Scan', 'Hack Traffic Lights', 'Hack Car', 'Raise Blockers', 'Hack Train', 'Blow Steampipe', 'Hack ATM', 'Hack Phone', "Exit"]
     i = 0
     for item in items:
         msg = bcolors.WARN + '[' + str(i) + ']' + bcolors.END
@@ -151,6 +151,14 @@ def hackPhone():
     input("Awaiting input...")
     print()
 
+def raiseBlockers():
+    pass
+
+def hackTrain():
+    pass
+
+def blowSteam():
+    pass
 
 # initSystem()
 # input("Awaiting input...")
@@ -174,11 +182,20 @@ while INAPP:
         hackCar()
     elif usrInput == "3":
         cls()
-        hackATM()
+        raiseBlockers()
     elif usrInput == "4":
         cls()
-        hackPhone()
+        hackTrain()
     elif usrInput == "5":
+        cls()
+        blowSteam()
+    elif usrInput == "6":
+        cls()
+        hackATM()
+    elif usrInput == "7":
+        cls()
+        hackPhone()
+    elif usrInput == "8":
         cls()
         INAPP = False
 
