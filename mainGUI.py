@@ -32,6 +32,15 @@ class MainApp(QMainWindow, ui):
         pass
 
 
+    def showHome(self):
+        self.mainTab.setCurrentIndex(0)
+
+    def showScript(self):
+        self.mainTab.setCurrentIndex(1)
+
+    
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     win = MainApp()
