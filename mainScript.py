@@ -6,6 +6,7 @@ if os.name == 'nt':
     init()
 
 TIME = 0.04
+INAPP = True
 
 def showLogo():
     logo = '''                                                                
@@ -29,7 +30,7 @@ def showLogo():
 
 def cls():
     os.system('cls' if os.name == 'nt' else 'clear')
-
+    showLogo()
 
 def write(word, time):
     for i in range(len(word)):
@@ -87,7 +88,7 @@ def shutdownSys():
 
 
 def showMenu():
-    items = ['Scan', 'Hack Traffic Lights', 'Hack Car', 'Hack ATM', 'Hack Phone']
+    items = ['Scan', 'Hack Traffic Lights', 'Hack Car', 'Hack ATM', 'Hack Phone', "Exit"]
     i = 0
     for item in items:
         msg = bcolors.WARN + '[' + str(i) + ']' + bcolors.END
@@ -97,10 +98,11 @@ def showMenu():
         print()
 
 def scanArea():
-    pass
+    writeC("Starting Scan...", "green", TIME)
+    write("####################################################################################################", TIME)
+    writeC("DONE", "green", 0)
 
 cls()
-showLogo()
 
 # initSystem()
 # input("Awaiting input...")
@@ -108,5 +110,11 @@ showLogo()
 
 showMenu()
 
-usrInput = input("Select Hack >>> ")
+while INAPP:
+    usrInput = input("Select Hack >>> ")
 
+    if usrInput == "0":
+        cls()
+        scanArea()
+    elif usrInput == "1":
+        cls()
