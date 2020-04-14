@@ -37,6 +37,7 @@ def write(word, time):
         print(word[i], sep='', end='', flush=True)
         sleep(time)
     sleep(time + 0.02)
+    print()
 
 
 def writeC(word, color, time):
@@ -98,23 +99,32 @@ def showMenu():
         print()
 
 def scanArea():
-    writeC("Starting Scan...", "green", TIME)
+    writeC("[*] Starting Scan...", "green", TIME)
     write("####################################################################################################", TIME)
     writeC("DONE", "green", 0)
 
-cls()
+def hackTL():
+    writeC("[*] Looking for nearest Traffic Light...", "green", 0.02)
+    write("[*] Aquiring data...", TIME)
+    write("[*] Infultraiting security...", TIME)
+    write("[*] Running exploit....", TIME)
+
 
 # initSystem()
 # input("Awaiting input...")
-# cls()
+cls()
 
-showMenu()
+
 
 while INAPP:
+    showMenu()
     usrInput = input("Select Hack >>> ")
+    cls()
 
     if usrInput == "0":
         cls()
         scanArea()
     elif usrInput == "1":
         cls()
+        hackTL()
+    
