@@ -114,6 +114,16 @@ def hackTL():
     input("Awaiting input...")
     print()
 
+def hackCar():
+    writeC("[*] Looking for nearest Car...", "green", 0.02)
+    write("[*] Sending Start request...", TIME)
+    write("[*] Aquiring response...", TIME)
+    write("[*] Running exploit....", TIME)
+    writeC("[*] DONE", "green", TIME)
+    print()
+    input("Awaiting input...")
+    print()
+
 
 # initSystem()
 # input("Awaiting input...")
@@ -132,7 +142,9 @@ while INAPP:
     elif usrInput == "1":
         cls()
         hackTL()
-    
+    elif usrInput == "2":
+        cls()
+        hackCar()
     elif usrInput == "5":
         cls()
         INAPP = False
