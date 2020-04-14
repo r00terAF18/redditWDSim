@@ -14,15 +14,22 @@ import qtmodern.windows
 
 #import resources_rc.py
 
-#ui,_ = loadUiType('Library System UI v4.ui')
+ui,_ = loadUiType('WDSkin.ui')
 
 
-class MainApp(QMainWindow):
+class MainApp(QMainWindow, ui):
     def __init__(self):
         QMainWindow.__init__(self)
-        #self.setupUi(self)
-        #self.UI_Handler()
-        #self.ButtonHandler()
+        self.setupUi(self)
+        self.UI_Handler()
+        self.ButtonHandler()
+
+    def UI_Handler(self):
+        self.mainTab.tabBar().setVisible(False)
+
+    ### Button Handler ####
+    def ButtonHandler(self):
+        pass
 
 
 if __name__ == "__main__":
