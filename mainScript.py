@@ -105,20 +105,33 @@ def scanArea():
     print()
 
 def hackTL():
-    writeC("[*] Looking for nearest Traffic Light...", "green", 0.02)
+    writeC("[*] L00king for nearest Traffic Light...", "green", 0.02)
     write("[*] Aquiring data...", TIME)
     write("[*] Infultraiting security...", TIME)
-    write("[*] Running exploit....", TIME)
+    write("[*] Running expl01t....", TIME)
     writeC("[*] DONE", "green", TIME)
     print()
     input("Awaiting input...")
     print()
 
 def hackCar():
-    writeC("[*] Looking for nearest Car...", "green", 0.02)
+    writeC("[*] L00king for nearest C4R...", "green", 0.02)
     write("[*] Sending Start request...", TIME)
     write("[*] Aquiring response...", TIME)
+    write("[*] Preparing exploit...", TIME)
     write("[*] Running exploit....", TIME)
+    writeC("[*] DONE", "green", TIME)
+    print()
+    input("Awaiting input...")
+    print()
+
+def hackATM():
+    writeC("[*] Looking for nearest ATM...", "green", 0.02)
+    write("[*] Indexing hacked Bank Accounts...", TIME)
+    write("[*] Sending packet...", TIME)
+    write("[*] Running exploit....", TIME)
+    write("[*] Running Crash0ut_Scr1pt...", TIME)
+    write("[*] Preparing for $$$$$$$$$$$$$$$$$$$$", TIME)
     writeC("[*] DONE", "green", TIME)
     print()
     input("Awaiting input...")
@@ -145,6 +158,9 @@ while INAPP:
     elif usrInput == "2":
         cls()
         hackCar()
+    elif usrInput == "3":
+        cls()
+        hackATM()
     elif usrInput == "5":
         cls()
         INAPP = False
