@@ -311,74 +311,32 @@
      <attribute name="title">
       <string>Tab 2</string>
      </attribute>
-     <widget class="QScrollArea" name="mainScroll">
+     <widget class="QTextEdit" name="logoarea">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
         <width>361</width>
-        <height>421</height>
+        <height>111</height>
        </rect>
       </property>
-      <property name="widgetResizable">
-       <bool>true</bool>
+      <property name="font">
+       <font>
+        <family>Source Code Pro</family>
+        <pointsize>5</pointsize>
+        <kerning>false</kerning>
+       </font>
       </property>
-      <widget class="QWidget" name="scrollAreaWidgetContents">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>359</width>
-         <height>419</height>
-        </rect>
-       </property>
-      </widget>
      </widget>
-     <widget class="QScrollArea" name="scroll_1">
+     <widget class="QTextEdit" name="mainText">
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>420</y>
-        <width>171</width>
-        <height>191</height>
+        <y>110</y>
+        <width>361</width>
+        <height>321</height>
        </rect>
       </property>
-      <property name="widgetResizable">
-       <bool>true</bool>
-      </property>
-      <widget class="QWidget" name="scrollAreaWidgetContents_2">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>169</width>
-         <height>189</height>
-        </rect>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QScrollArea" name="scroll_2">
-      <property name="geometry">
-       <rect>
-        <x>170</x>
-        <y>420</y>
-        <width>191</width>
-        <height>191</height>
-       </rect>
-      </property>
-      <property name="widgetResizable">
-       <bool>true</bool>
-      </property>
-      <widget class="QWidget" name="scrollAreaWidgetContents_3">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>189</width>
-         <height>189</height>
-        </rect>
-       </property>
-      </widget>
      </widget>
     </widget>
    </widget>
