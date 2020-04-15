@@ -80,19 +80,23 @@ class MainApp(QMainWindow, ui):
 
 
     def writeC(self, word, color, time):
-        if color == 'green':
+        if color == 'green':  # #00FF00
             for i in range(len(word)):
                 print(f'{bcolors.PASS}{word[i]}{bcolors.END}', sep='', end='', flush=True)
                 sleep(time)
-        elif color == 'red':
+        elif color == 'red':  # #FF3333
+            # text = "<span style=\" font-size:8pt; font-weight:600; color:#ff0000;\" >"
+            # text.append(word)
+            # text.append("</span>")
+            # self.myTextEdit.write(text)
             for i in range(len(word)):
                 print(f'{bcolors.FAIL}{word[i]}{bcolors.END}', sep='', end='', flush=True)
                 sleep(time)
-        elif color == 'blue':
+        elif color == 'blue':  # #10B1FE
             for i in range(len(word)):
                 print(f'{bcolors.BLUE}{word[i]}{bcolors.END}', sep='', end='', flush=True)
                 sleep(time)
-        elif color == 'yellow':
+        elif color == 'yellow':  # #F9C859
             for i in range(len(word)):
                 print(f'{bcolors.WARN}{word[i]}{bcolors.END}', sep='', end='', flush=True)
                 sleep(time)
