@@ -337,6 +337,24 @@
         <height>321</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Source Code Pro</family>
+       </font>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnBack">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>580</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>H4CK5</string>
+      </property>
      </widget>
     </widget>
    </widget>
