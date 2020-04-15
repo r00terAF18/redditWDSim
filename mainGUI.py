@@ -62,7 +62,7 @@ class MainApp(QMainWindow, ui):
 
     ### Button Handler ####
     def ButtonHandler(self):
-        self.btnCar.clicked.connect()
+        self.btnCar.clicked.connect(self.hackCar)
 
 
     def showHome(self):
@@ -104,6 +104,7 @@ class MainApp(QMainWindow, ui):
 
 
     def hackCar(self):
+        self.showScript()
         writeC("[*] L00king for nearest C4R...", "green", 0.02)
         write("[*] Sending Start request...", TIME)
         write("[*] Aquiring response...", TIME)
