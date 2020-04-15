@@ -1,13 +1,11 @@
 import os
 import sys
 
-
 from PyQt5 import QtGui, uic
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.uic import loadUiType
-
 
 import qtmodern.styles
 import qtmodern.windows
@@ -30,6 +28,7 @@ class MainApp(QMainWindow, ui):
         self.UI_Handler()
         self.ButtonHandler()
         self.TIME = 0.035
+        self.showLogo()
 
 
 
@@ -50,7 +49,7 @@ class MainApp(QMainWindow, ui):
     `---'.|                 ---`-' |  ,     .-./  ---`-'            
     `---`                         `--`---'                        
                                                                     '''
-        
+        self.logoarea.setText(logo)
 
     def cls(self):
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -63,6 +62,7 @@ class MainApp(QMainWindow, ui):
     ### Button Handler ####
     def ButtonHandler(self):
         self.btnCar.clicked.connect(self.hackCar)
+        self.btnBack.clicked.connect(self.showHome)
 
 
     def showHome(self):
@@ -70,15 +70,14 @@ class MainApp(QMainWindow, ui):
 
     def showScript(self):
         self.mainTab.setCurrentIndex(1)
-
     
 
     def write(self, word, time):
-        for i in range(len(word)):
-            print(word[i], sep='', end='', flush=True)
-            sleep(time)
+        self.mainText.setText(word)
+        # for i in range(len(word)):
+        #     self.mainText.setText(word[i])
+        #     sleep(time)
         sleep(time + 0.02)
-        print()
 
 
     def writeC(self, word, color, time):
@@ -105,15 +104,14 @@ class MainApp(QMainWindow, ui):
 
     def hackCar(self):
         self.showScript()
-        writeC("[*] L00king for nearest C4R...", "green", 0.02)
-        write("[*] Sending Start request...", TIME)
-        write("[*] Aquiring response...", TIME)
-        write("[*] Preparing exploit...", TIME)
-        write("[*] Running exploit....", TIME)
-        writeC("[*] DONE", "green", TIME)
-        print()
-        input("Awaiting input...")
-        print()
+        self.writeC("[*] L00king for nearest C4R...", "green", 0.02)
+        # self.write("[*] Sending Start request...", self.TIME)
+        # self.write("[*] Aquiring response...", self.TIME)
+        # self.write("[*] Preparing exploit...", self.TIME)
+        # self.write("[*] Running exploit....", self.TIME)
+        #self.writeC("[*] DONE", "green", self.TIME)
+        #self.mainText.setText("\n")
+        #input("Awaiting input...")
 
 
 

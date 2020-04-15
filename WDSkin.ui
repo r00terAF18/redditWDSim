@@ -323,7 +323,7 @@
       <property name="font">
        <font>
         <family>Source Code Pro</family>
-        <pointsize>5</pointsize>
+        <pointsize>4</pointsize>
         <kerning>false</kerning>
        </font>
       </property>
