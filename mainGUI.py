@@ -73,10 +73,9 @@ class MainApp(QMainWindow, ui):
     
 
     def write(self, word, time):
-        self.mainText.setText(word)
-        # for i in range(len(word)):
-        #     self.mainText.setText(word[i])
-        #     sleep(time)
+        for i in range(len(word)):
+            self.mainText.append(word[i])
+            sleep(time)
         sleep(time + 0.02)
 
 
@@ -104,11 +103,11 @@ class MainApp(QMainWindow, ui):
 
     def hackCar(self):
         self.showScript()
-        self.writeC("[*] L00king for nearest C4R...", "green", 0.02)
-        # self.write("[*] Sending Start request...", self.TIME)
-        # self.write("[*] Aquiring response...", self.TIME)
-        # self.write("[*] Preparing exploit...", self.TIME)
-        # self.write("[*] Running exploit....", self.TIME)
+        #self.writeC("[*] L00king for nearest C4R...", "green", 0.02)
+        self.write("[*] Sending Start request...", self.TIME)
+        self.write("[*] Aquiring response...", self.TIME)
+        self.write("[*] Preparing exploit...", self.TIME)
+        self.write("[*] Running exploit....", self.TIME)
         #self.writeC("[*] DONE", "green", self.TIME)
         #self.mainText.setText("\n")
         #input("Awaiting input...")

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>360</width>
-    <height>630</height>
+    <width>1440</width>
+    <height>2960</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -24,8 +24,8 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>360</width>
-    <height>630</height>
+    <width>99999</width>
+    <height>99999</height>
    </size>
   </property>
   <property name="contextMenuPolicy">
@@ -40,8 +40,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>361</width>
-      <height>631</height>
+      <width>1440</width>
+      <height>2960</height>
      </rect>
     </property>
     <property name="currentIndex">
