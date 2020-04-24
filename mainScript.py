@@ -36,7 +36,7 @@ def write(word, time):
     for i in range(len(word)):
         print(word[i], sep='', end='', flush=True)
         sleep(time)
-    sleep(time + 0.02)
+    sleep(time + 0.1)
     print()
 
 
@@ -80,8 +80,8 @@ def initSystem():
 
 
 def shutdownSys():
-    write("Deactivating Modules...", TIME)
-    writeC("Done", "red", TIME)
+    write("Deactivating Modules...", 0.05)
+    writeC("Done", "red", 0.05)
     write("Shuting down System...", TIME)
     writeC("Done", "red", TIME)
     
@@ -93,7 +93,7 @@ def showMenu():
     for item in items:
         msg = bcolors.WARN + '[' + str(i) + ']' + bcolors.END
         print(msg, sep='', end='')
-        write("-" + item, TIME)
+        write("-" + item, 0.05)
         i += 1
 
 def scanArea():

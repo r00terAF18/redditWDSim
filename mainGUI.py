@@ -76,7 +76,7 @@ class MainApp(QMainWindow, ui):
         for i in range(len(word)):
             self.mainText.append(word[i])
             sleep(time)
-        sleep(time + 0.02)
+        sleep(time + 0.05)
 
 
     def writeC(self, word, color, time):
