@@ -5,7 +5,7 @@ if os.name == 'nt':
     from colorama import init
     init()
 
-TIME = 0.035
+TIME = 0.045
 INAPP = True
 
 def showLogo():

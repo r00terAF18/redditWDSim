@@ -27,7 +27,7 @@ class MainApp(QMainWindow, ui):
         self.setupUi(self)
         self.UI_Handler()
         self.ButtonHandler()
-        self.TIME = 0.035
+        self.TIME = 0.045
         self.showLogo()
 
 
