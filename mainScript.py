@@ -82,6 +82,7 @@ def initSystem():
 def shutdownSys():
     write("Deactivating Modules...", 0.05)
     writeC("Done", "red", 0.05)
+    
     write("Shuting down System...", TIME)
     writeC("Done", "red", TIME)
     
