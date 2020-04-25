@@ -5,7 +5,7 @@ if os.name == 'nt':
     from colorama import init
     init()
 
-TIME = 0.035
+TIME = 0.05
 INAPP = True
 
 def showLogo():
@@ -36,7 +36,7 @@ def write(word, time):
     for i in range(len(word)):
         print(word[i], sep='', end='', flush=True)
         sleep(time)
-    sleep(time + 0.02)
+    sleep(time + 0.2)
     print()
 
 
@@ -63,25 +63,26 @@ def writeC(word, color, time):
 
 
 def initSystem():
-    write("Booting System...", TIME)
-    writeC("OK", "green", TIME)
-    write("Loading Modules...", TIME)
-    writeC("OK", "green", TIME)
-    write("Reading changes...", TIME)
-    writeC("OK", "green", TIME)
-    write("Applying updates...", TIME)
-    writeC("OK", "green", TIME)
-    write("Creating helper Threads...", TIME)
-    writeC("OK", "green", TIME)
-    write("Activating all Modules...", TIME)
-    writeC("OK", "green", TIME)
-    write("DONE", TIME)
+    write("Booting System...", 0.02)
+    writeC("OK", "green", 0.02)
+    write("Loading Modules...", 0.02)
+    writeC("OK", "green", 0.02)
+    write("Reading changes...", 0.02)
+    writeC("OK", "green", 0.02)
+    write("Applying updates...", 0.02)
+    writeC("OK", "green", 0.02)
+    write("Creating helper Threads...", 0.02)
+    writeC("OK", "green", 0.02)
+    write("Activating all Modules...", 0.02)
+    writeC("OK", "green", 0.02)
+    write("DONE", 0.02)
     print()
 
 
 def shutdownSys():
     write("Deactivating Modules...", TIME)
     writeC("Done", "red", TIME)
+    
     write("Shuting down System...", TIME)
     writeC("Done", "red", TIME)
     
@@ -93,12 +94,12 @@ def showMenu():
     for item in items:
         msg = bcolors.WARN + '[' + str(i) + ']' + bcolors.END
         print(msg, sep='', end='')
-        write("-" + item, TIME)
+        write("-" + item, 0.015)
         i += 1
 
 def scanArea():
     writeC("[*] Starting Scan...", "green", TIME)
-    write("####################################################################################################", 0.03)
+    write("[####################################################################################################]", 0.035)
     writeC("DONE", "green", 0)
     print()
     input("Awaiting input...")
