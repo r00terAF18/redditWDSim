@@ -26,7 +26,7 @@ class MainApp(QMainWindow, ui):
         self.setupUi(self)
         self.UI_Handler()
         self.ButtonHandler()
-        self.TIME = 0.035
+        self.TIME = 0.045
         self.showLogo()
 
 
@@ -75,7 +75,7 @@ class MainApp(QMainWindow, ui):
         for i in range(len(word)):
             self.mainText.append(word[i])
             sleep(time)
-        sleep(time + 0.02)
+        sleep(time + 0.05)
 
 
     def writeC(self, word, color, time):
