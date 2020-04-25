@@ -16,7 +16,6 @@ if os.name == 'nt':
     from colorama import init
     init()
 
-#import resources_rc.py
 
 ui,_ = loadUiType('WDSkin.ui')
 
@@ -59,7 +58,7 @@ class MainApp(QMainWindow, ui):
     def UI_Handler(self):
         self.mainTab.tabBar().setVisible(False)
 
-    ### Button Handler ####
+
     def ButtonHandler(self):
         self.btnCar.clicked.connect(self.hackCar)
         self.btnBack.clicked.connect(self.showHome)
@@ -81,25 +80,29 @@ class MainApp(QMainWindow, ui):
 
     def writeC(self, word, color, time):
         if color == 'green':  # #00FF00
-            for i in range(len(word)):
-                print(f'{bcolors.PASS}{word[i]}{bcolors.END}', sep='', end='', flush=True)
-                sleep(time)
+            text = "<span style=\" font-size:8pt; font-weight:600; color:#00FF00;\" >"
+            text += word
+            text += "</span>"
+            self.mainText.append(text)
+            sleep(time)
         elif color == 'red':  # #FF3333
-            # text = "<span style=\" font-size:8pt; font-weight:600; color:#ff0000;\" >"
-            # text.append(word)
-            # text.append("</span>")
-            # self.myTextEdit.write(text)
-            for i in range(len(word)):
-                print(f'{bcolors.FAIL}{word[i]}{bcolors.END}', sep='', end='', flush=True)
-                sleep(time)
+            text = "<span style=\" font-size:8pt; font-weight:600; color:#FF3333;\" >"
+            text += word
+            text += "</span>"
+            self.mainText.append(text)
+            sleep(time)
         elif color == 'blue':  # #10B1FE
-            for i in range(len(word)):
-                print(f'{bcolors.BLUE}{word[i]}{bcolors.END}', sep='', end='', flush=True)
-                sleep(time)
+            text = "<span style=\" font-size:8pt; font-weight:600; color:#10B1FE;\" >"
+            text += word
+            text += "</span>"
+            self.mainText.append(text)
+            sleep(time)
         elif color == 'yellow':  # #F9C859
-            for i in range(len(word)):
-                print(f'{bcolors.WARN}{word[i]}{bcolors.END}', sep='', end='', flush=True)
-                sleep(time)
+            text = "<span style=\" font-size:8pt; font-weight:600; color:#F9C859;\" >"
+            text += word
+            text += "</span>"
+            self.mainText.append(text)
+            sleep(time)
         else:
             write(message)
         print()
@@ -107,7 +110,7 @@ class MainApp(QMainWindow, ui):
 
     def hackCar(self):
         self.showScript()
-        #self.writeC("[*] L00king for nearest C4R...", "green", 0.02)
+        self.writeC("[*] L00king for nearest C4R...", "red", 0.02)
         self.write("[*] Sending Start request...", self.TIME)
         self.write("[*] Aquiring response...", self.TIME)
         self.write("[*] Preparing exploit...", self.TIME)
